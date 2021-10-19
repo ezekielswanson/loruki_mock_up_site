@@ -5,6 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 
+/* Define a scope to use for your variables, we use root here */
+:root {
+    --primary-color: #047aed;
+}
+
+
+
 * {
     /* Allows you to add padding an borders w/o adding to width of element */
     box-sizing: border-box;
@@ -47,7 +54,7 @@ img {
 /* NAV */
 
 nav {
-    background-color: #047aed;
+    background-color: var(--primary-color);
     color: white;
     margin-top: 0;
     height: 70px;
@@ -86,4 +93,27 @@ nav {
 }
 
 
+/* SHOWCASE */
 
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+    margin: 0 auto;
+}
+
+.showcase-text h1 {
+    font-size: 16px;
+}
+
+.showcase-text h1 {
+    font-size: 40px;
+
+}
+
+.btn btn-outline {
+    border: 5px solid white;
+    padding: 3em;
+    
+}
