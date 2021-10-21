@@ -10,88 +10,100 @@
     --primary-color: #047aed;
 }
 
-
-
 * {
-    /* Allows you to add padding an borders w/o adding to width of element */
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-};
-
-body {
+  }
+  
+  body {
     font-family: 'Lato', sans-serif;
     color: #333;
     line-height: 1.6;
-}
-
-ul {
+  }
+  
+  ul {
     list-style-type: none;
-}
-
-a {
+  }
+  
+  a {
     text-decoration: none;
     color: #333;
-}
-
-h1, h2 {
-    font-style: 300;
+  }
+  
+  h1,
+  h2 {
+    font-weight: 300;
     line-height: 1.2;
     margin: 10px 0;
-}
-
-p {
+  }
+  
+  p {
     margin: 10px 0;
-}
-
-img {
+  }
+  
+  img {
     width: 100%;
-}
+  }
+  
+  code,
+  pre {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .hidden {
+    visibility: hidden;
+    height: 0;
+  }
 
 
 /* ======= SECTION STYLES ====== */
 
 /* NAV */
 
-nav {
+.navbar {
     background-color: var(--primary-color);
-    color: white;
-    margin-top: 0;
+    color: #fff;
     height: 70px;
+  }
+  
+  .nav .flex {
+      justify-content: space-between;
+  }
+
+  .navbar ul {
+      display: flex;
+  }
+
+  .navbar a {
+      padding: 10px;
+      margin: 0 5px;
+  }
+
+  .navbar a:hover {
+      border-bottom: 2px #fff solid;
+  }
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
 }
 
-.flex_nav {
+.flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-
-
-}
-
-.flex_nav h1 {
-    font-size: 32px;
+    height: 100%;
 }
 
 
-.flex_nav li {
-    display: inline-block;
-    color: white;
-    margin-left: 1.2em;
-}
 
-.flex_nav a {
-    color: white;
-    font-size: 16px;
-}
-
-.flex_nav a:hover {
-    border-bottom: 2px solid white;
-}
-
+  
 
 /* SHOWCASE */
 
@@ -100,20 +112,49 @@ nav {
     background-color: var(--primary-color);
     color: white;
     position: relative;
-    margin: 0 auto;
+   
 }
 
-.showcase-text h1 {
-    font-size: 16px;
+.showcase .grid {
+    /*giving the left side a bit more space than the right*/
+    grid-template-columns: 55% 45%;
 }
 
 .showcase-text h1 {
     font-size: 40px;
+    margin-top: 0;
+}
+
+.showcase-text p {
+    font-size: 16px;
+    margin: 20px 0;
 
 }
 
-.btn btn-outline {
-    border: 5px solid white;
-    padding: 3em;
-    
+
+/* ====  UTILITIES ==== */
+
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
 }
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    /*aligns items horz and vert */
+    justify-content: center;
+    align-items: center;
+    /* puts heigth on actual grid item */
+    height: 100%;
+
+}
+
+
+  
