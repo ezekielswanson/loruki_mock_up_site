@@ -111,13 +111,15 @@
     height: 400px;
     background-color: var(--primary-color);
     color: white;
-    position: relative;
    
 }
 
 .showcase .grid {
     /*giving the left side a bit more space than the right*/
     grid-template-columns: 55% 45%;
+    column-gap: 30px;
+     /*Gets rid of scroll bar next to the form */
+     overflow: visible;
 }
 
 .showcase-text h1 {
@@ -131,6 +133,27 @@
 
 }
 
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form .form_control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+  border: 0;
+  border-bottom: 2px gray solid;
+  width: 100%;
+  padding: 3px;
+}
 
 /* ====  UTILITIES ==== */
 
@@ -156,5 +179,15 @@
 
 }
 
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  /*adds a transparent shadow*/
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  margin: 10px;
+  color: #333;
+}
 
+3
   
