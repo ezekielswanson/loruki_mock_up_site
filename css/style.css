@@ -111,6 +111,7 @@
     height: 400px;
     background-color: var(--primary-color);
     color: white;
+    position: relative;
    
 }
 
@@ -159,39 +160,45 @@
   outline: none;
 }
 
-/* ====  UTILITIES ==== */
-
-
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow: auto;
-    padding: 0 40px;
-}
-
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 20px;
-    /*aligns items horz and vert */
-    justify-content: center;
-    align-items: center;
-    /* puts heigth on actual grid item */
-    height: 100%;
+.showcase-form h2 {
+  color: black;
 
 }
 
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  /*adds a transparent shadow*/
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  padding: 20px;
-  margin: 10px;
-  color: #333;
+.showcase::before,
+.shwocase::after {
+  content: '';
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: white;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+
 }
 
-3
-  
+
+/* ====== STATS =====*/
+
+.stats {
+  padding-top: 100px;
+}
+
+.stats-heading {
+  max-width: 500px;
+  text-align: center;
+  margin: auto;
+}
+
+.stats .grid h3 {
+  font-size: 35px;
+}
+
+.stats .grid p {
+  font-size: 20px;
+  font-weight: bold;
+}
