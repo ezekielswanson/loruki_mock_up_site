@@ -8,6 +8,9 @@
 /* Define a scope to use for your variables, we use root here */
 :root {
     --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
 }
 
 * {
@@ -189,9 +192,9 @@
 }
 
 .stats-heading {
-  max-width: 500px;
   text-align: center;
   margin: auto;
+  padding: 0 15em;
 }
 
 .stats .grid h3 {
@@ -201,4 +204,46 @@
 .stats .grid p {
   font-size: 20px;
   font-weight: bold;
+}
+
+/* Cli */
+
+.cli .card {
+  color: black;
+}
+
+
+
+.cli .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+
+}
+
+/*Expands the cli img down a row
+& over a column 
+& pushes the card over to the left*/
+
+.cli .grid > *:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+
+/* CLOUD */
+
+
+/*Trgt the cloud section and then grid*/
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+
+}
+
+
+/* Languages */
+.languages .container .card h4 {
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
 }
