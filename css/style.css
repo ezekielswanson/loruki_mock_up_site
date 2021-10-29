@@ -247,6 +247,20 @@
 
 
 /* Languages */
+
+
+/*If you have flex row you usually want them to wrap on another line for 
+responsiveness*/
+
+.languages .flex {
+  flex-wrap: wrap;
+}
+
+
+.languages .card {
+  margin-bottom: 40px;
+}
+
 .languages .container .card h4 {
   color: black;
   text-align: center;
@@ -262,5 +276,28 @@
 
 .social a {
   margin: 0 .3em;
+
+}
+
+
+/*Tablets and under */
+@media (max-width: 760px) {
+
+}
+
+/*Mobile */
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    padding: 10px;
+    background-color: rgba(0,0,0,0.1);
+  }
 
 }
