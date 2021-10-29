@@ -83,6 +83,7 @@
   .navbar a {
       padding: 10px;
       margin: 0 5px;
+      color: #fff;
   }
 
   .navbar a:hover {
@@ -240,10 +241,26 @@
 
 }
 
+.languages .card {
+  transition: transform 0.2s ease-in;
+}
+
 
 /* Languages */
 .languages .container .card h4 {
   color: black;
   text-align: center;
   margin-bottom: 10px;
+}
+
+.languages .card:hover {
+  transform:translateY(-15px);
+}
+
+/* Footer */
+
+
+.social a {
+  margin: 0 .3em;
+
 }
