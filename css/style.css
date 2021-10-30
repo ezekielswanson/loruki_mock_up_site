@@ -276,11 +276,32 @@ responsiveness*/
 
 /*Features heading*/
 
+.features head {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.features-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+
+}
+
 .features-head img {
   width: 200px;
-    /*In grid you align items with justify self */
+}
+
+/*Features sub heading */
+
+.features-sub-head img {
+  width: 200px;
   justify-self: flex-end;
 }
+
+
 
 
 
