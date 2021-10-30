@@ -271,6 +271,24 @@ responsiveness*/
   transform:translateY(-15px);
 }
 
+
+/* ======== FEATURES ======= */
+
+/*Features heading*/
+
+.features-head img {
+  width: 200px;
+    /*In grid you align items with justify self */
+  justify-self: flex-end;
+}
+
+
+
+
+
+
+
+
 /* Footer */
 
 
@@ -282,6 +300,41 @@ responsiveness*/
 
 /*Tablets and under */
 @media (max-width: 760px) {
+
+  /*Stacking all grid columns ontop of e/other*/
+  .grid,
+  .showcase .grid,
+  .stats .grid,
+  .cli .grid,
+  .cloud .grid {
+    grid-template-columns: 1fr;
+    /*For grid temp rows set in cli*/
+    grid-template-rows: 1fr;
+  }
+
+  .showcase {
+    height: auto;
+
+  }
+
+  /*On smaller screens you want to text align center things*/
+  .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .showcase-form {
+    /*Justify self goes on flex/grid ITEMS*/
+    /*Justify content goes on flex/grid PARENTS
+    & this centers EVERYTHING*/
+    justify-self: center;
+    margin: auto;
+  }
+
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
 
 }
 
@@ -298,6 +351,11 @@ responsiveness*/
   .navbar ul {
     padding: 10px;
     background-color: rgba(0,0,0,0.1);
+  }
+
+  .showcase-text {
+    text-align: center;
+    padding: auto;
   }
 
 }
